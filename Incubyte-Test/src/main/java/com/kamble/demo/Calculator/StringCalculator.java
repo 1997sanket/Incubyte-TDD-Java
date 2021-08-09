@@ -29,7 +29,7 @@ public class StringCalculator {
 			if (x < 0)
 				throw new RuntimeException("negatives not allowed");
 
-			if (x == 1001)
+			if (x > 1000)
 				continue;
 
 			sum += x;
