@@ -48,4 +48,9 @@ public class StringCalculatorTest {
 	public void Test_ignore_above1000() {
 		Assert.assertEquals(2, sc.Add("1001,2"));
 	}
+
+	@Test
+	public void Test_support_different_delimiters() {
+		Assert.assertEquals(3, sc.Add("//;\n1;2"));
+	}
 }
