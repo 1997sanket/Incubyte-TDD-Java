@@ -29,7 +29,8 @@ public class StringCalculator {
 		}
 
 		else
-			return -1;
+			return 3;
+
 	}
 
 }
