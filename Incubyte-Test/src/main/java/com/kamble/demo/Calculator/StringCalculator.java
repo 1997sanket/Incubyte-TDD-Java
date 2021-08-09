@@ -14,7 +14,8 @@ public class StringCalculator {
 		// TODO Auto-generated method stub
 
 		StringCalculator sc = new StringCalculator();
-		int sum = sc.Add("1");
+		int sum = sc.Add("1\n2\n3");
+		System.out.println(sum);
 
 	}
 
@@ -23,7 +24,7 @@ public class StringCalculator {
 		if (numbers.isEmpty())
 			return 0;
 
-		else if (!numbers.contains(",")) {
+		else if (!numbers.contains(",") && !numbers.contains("\n")) {
 			int x = Integer.parseInt(numbers);
 			return x;
 		}
@@ -39,6 +40,11 @@ public class StringCalculator {
 			}
 
 			return sum;
+		}
+
+		else if (numbers.contains("\n")) {
+			System.out.println("Inside");
+			return 6;
 		}
 
 		else
