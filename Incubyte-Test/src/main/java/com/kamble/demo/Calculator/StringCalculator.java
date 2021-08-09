@@ -28,6 +28,19 @@ public class StringCalculator {
 			return x;
 		}
 
+		else if (numbers.contains(",")) {
+			String[] separatedNumbers = numbers.split(",");
+
+			int sum = 0;
+
+			for (String s : separatedNumbers) {
+				int x = Integer.parseInt(s);
+				sum += x;
+			}
+
+			return sum;
+		}
+
 		else
 			return 3;
 

@@ -30,6 +30,6 @@ public class StringCalculatorTest {
 	@Test
 	public void Test_when_String_has_2_numbers() {
 
-		Assert.assertEquals(3, sc.Add("1,2"));
+		Assert.assertEquals(5, sc.Add("2,3"));
 	}
 }
