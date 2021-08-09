@@ -53,4 +53,9 @@ public class StringCalculatorTest {
 	public void Test_support_different_delimiters() {
 		Assert.assertEquals(3, sc.Add("//;\n1;2"));
 	}
+
+	@Test
+	public void Test_support_delimiter_of_anyLength() {
+		Assert.assertEquals(6, sc.Add("//[***]\\n1***2***3"));
+	}
 }
