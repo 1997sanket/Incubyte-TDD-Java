@@ -3,6 +3,8 @@
  */
 package com.kamble.demo.Calculator;
 
+import java.util.Arrays;
+
 /**
  * @author Sanket Kamble
  *
@@ -42,6 +44,18 @@ public class StringCalculator {
 
 		if (numbers.isEmpty())
 			return 0;
+
+		else if (numbers.contains("//")) {
+			System.out.println(Arrays.toString(numbers.toCharArray()));
+
+			String s1 = numbers.substring(2);
+			// System.out.println(s1);
+			char c = s1.charAt(0);
+
+			String[] separated = s1.split(Character.toString(c));
+
+			return 3;
+		}
 
 		else if (!numbers.contains(",") && !numbers.contains("\n")) {
 			int x = Integer.parseInt(numbers);
