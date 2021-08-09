@@ -35,7 +35,7 @@ public class StringCalculatorTest {
 	@Test
 	public void Test_when_String_has_backSlashN_insteadOfCommas() {
 		
-		Assert.assertEquals(6, sc.Add("1\n2\n3"));
+		Assert.assertEquals(6, sc.Add("1\n2,3"));
 	}
 
 }

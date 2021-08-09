@@ -14,9 +14,21 @@ public class StringCalculator {
 		// TODO Auto-generated method stub
 
 		StringCalculator sc = new StringCalculator();
-		int sum = sc.Add("1\n2\n3");
-		System.out.println(sum);
+		int sum = sc.Add("1\n2,3");
+		// System.out.println(sum);
 
+	}
+
+	private static int sum(String[] numbers) {
+
+		int sum = 0;
+
+		for (String s : numbers) {
+			int x = Integer.parseInt(s);
+			sum += x;
+		}
+
+		return sum;
 	}
 
 	public int Add(String numbers) {
@@ -29,22 +41,32 @@ public class StringCalculator {
 			return x;
 		}
 
+		else if (numbers.contains(",") && numbers.contains("\n")) {
+
+			// System.out.println("Printing as it is " + numbers);
+
+			String s1 = numbers.replace("\n", ",");
+
+			String[] separated = s1.split(",");
+
+			return sum(separated);
+		}
+
 		else if (numbers.contains(",")) {
-			String[] separatedNumbers = numbers.split(",");
 
-			int sum = 0;
+			// Removing commas
+			String[] separatedNumbersFromCommas = numbers.split(",");
 
-			for (String s : separatedNumbers) {
-				int x = Integer.parseInt(s);
-				sum += x;
-			}
+			return sum(separatedNumbersFromCommas);
 
-			return sum;
 		}
 
 		else if (numbers.contains("\n")) {
-			System.out.println("Inside");
-			return 6;
+
+			// Removing backSlashN
+			String[] separated = numbers.split("\n");
+
+			return sum(separated);
 		}
 
 		else
