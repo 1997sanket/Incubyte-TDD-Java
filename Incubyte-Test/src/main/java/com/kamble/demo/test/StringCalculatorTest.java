@@ -38,4 +38,9 @@ public class StringCalculatorTest {
 		Assert.assertEquals(6, sc.Add("1\n2,3"));
 	}
 
+	@Test
+	public void Test_when_String_has_negative_number() {
+
+		Assert.assertEquals(new RuntimeException("negatives not allowed"), sc.Add("-1"));
+	}
 }

@@ -25,6 +25,7 @@ public class StringCalculator {
 
 		for (String s : numbers) {
 			int x = Integer.parseInt(s);
+
 			sum += x;
 		}
 
@@ -38,6 +39,7 @@ public class StringCalculator {
 
 		else if (!numbers.contains(",") && !numbers.contains("\n")) {
 			int x = Integer.parseInt(numbers);
+
 			return x;
 		}
 
