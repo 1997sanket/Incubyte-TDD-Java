@@ -43,4 +43,9 @@ public class StringCalculatorTest {
 
 		Assert.assertEquals(-2, sc.Add("-1"));
 	}
+
+	@Test
+	public void Test_ignore_above1000() {
+		Assert.assertEquals(2, sc.Add("1001,2"));
+	}
 }
