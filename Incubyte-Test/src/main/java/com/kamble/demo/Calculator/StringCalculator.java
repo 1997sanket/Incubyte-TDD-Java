@@ -26,6 +26,9 @@ public class StringCalculator {
 		for (String s : numbers) {
 			int x = Integer.parseInt(s);
 
+			if (x < 0)
+				throw new RuntimeException("negatives not allowed");
+
 			sum += x;
 		}
 

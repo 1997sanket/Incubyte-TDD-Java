@@ -41,6 +41,6 @@ public class StringCalculatorTest {
 	@Test(expected = RuntimeException.class)
 	public void Test_when_String_has_negative_number() {
 
-		Assert.assertEquals(-1, sc.Add("-1"));
+		Assert.assertEquals(-2, sc.Add("-1"));
 	}
 }
