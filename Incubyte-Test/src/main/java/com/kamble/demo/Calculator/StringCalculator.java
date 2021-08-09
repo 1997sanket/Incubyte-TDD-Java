@@ -14,7 +14,7 @@ public class StringCalculator {
 		// TODO Auto-generated method stub
 
 		StringCalculator sc = new StringCalculator();
-		int sum = sc.Add("");
+		int sum = sc.Add("1");
 
 	}
 

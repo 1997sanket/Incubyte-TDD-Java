@@ -13,11 +13,17 @@ import com.kamble.demo.Calculator.StringCalculator;
  */
 public class StringCalculatorTest {
 
+	private StringCalculator sc = new StringCalculator();
+
 	@Test
 	public void Test_when_String_is_Empty() {
 
-		StringCalculator sc = new StringCalculator();
-
 		Assert.assertEquals(0, sc.Add(""));
+	}
+
+	@Test
+	public void Test_when_String_has_1_number() {
+
+		Assert.assertEquals(1, sc.Add("1"));
 	}
 }
