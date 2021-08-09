@@ -24,6 +24,6 @@ public class StringCalculatorTest {
 	@Test
 	public void Test_when_String_has_1_number() {
 
-		Assert.assertEquals(1, sc.Add("1"));
+		Assert.assertEquals(2, sc.Add("2"));
 	}
 }

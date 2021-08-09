@@ -23,8 +23,13 @@ public class StringCalculator {
 		if (numbers.isEmpty())
 			return 0;
 
+		else if (!numbers.contains(",")) {
+			int x = Integer.parseInt(numbers);
+			return x;
+		}
+
 		else
-			return 1;
+			return -1;
 	}
 
 }
