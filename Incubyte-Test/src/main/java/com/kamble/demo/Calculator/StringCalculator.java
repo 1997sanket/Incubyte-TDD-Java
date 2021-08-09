@@ -40,6 +40,9 @@ public class StringCalculator {
 		else if (!numbers.contains(",") && !numbers.contains("\n")) {
 			int x = Integer.parseInt(numbers);
 
+			if (x < 0)
+				throw new RuntimeException("negatives not allowed");
+
 			return x;
 		}
 
