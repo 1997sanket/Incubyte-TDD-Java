@@ -34,7 +34,7 @@ public class StringCalculatorTest {
 
 	@Test
 	public void Test_when_String_has_backSlashN_insteadOfCommas() {
-		
+
 		Assert.assertEquals(6, sc.Add("1\n2,3"));
 	}
 
@@ -56,6 +56,6 @@ public class StringCalculatorTest {
 
 	@Test
 	public void Test_support_delimiter_of_anyLength() {
-		Assert.assertEquals(6, sc.Add("//[***]\\n1***2***3"));
+		Assert.assertEquals(6, sc.Add("//***\n1***2***3"));
 	}
 }

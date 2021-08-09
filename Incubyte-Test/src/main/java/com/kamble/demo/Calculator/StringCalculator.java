@@ -46,16 +46,39 @@ public class StringCalculator {
 			return 0;
 
 		else if (numbers.contains("//")) {
-			System.out.println(Arrays.toString(numbers.toCharArray()));
 
-			char c = numbers.charAt(2);
+			StringBuilder s = new StringBuilder("");
 
-			String s1 = numbers.substring(4);
+			int i = 2;
+			while (!Character.toString(numbers.charAt(i)).equals("\n")) {
+				s.append(numbers.charAt(i++));
 
-			System.out.println("After substring : " + s1);
-			String[] separated = s1.split(Character.toString(c));
+			}
+
+			System.out.println("Delimiter : " + s);
+
+			System.out.println(i);
+
+			String s1 = numbers.substring(i + 1);
+			System.out.println("s1 : " + s1);
+			String[] separated = s1.split(new String(s));
+
+			System.out.println("Final string : " + Arrays.toString(separated));
 
 			return sum(separated);
+
+			/*
+			 * System.out.println(Arrays.toString(numbers.toCharArray()));
+			 * 
+			 * char c = numbers.charAt(2);
+			 * 
+			 * String s1 = numbers.substring(4);
+			 * 
+			 * System.out.println("After substring : " + s1); String[] separated =
+			 * s1.split(Character.toString(c));
+			 * 
+			 * return sum(separated);
+			 */
 		}
 
 		else if (!numbers.contains(",") && !numbers.contains("\n")) {
