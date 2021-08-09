@@ -42,7 +42,7 @@ public class StringCalculator {
 		}
 
 		else
-			return 3;
+			return -1;
 
 	}
 

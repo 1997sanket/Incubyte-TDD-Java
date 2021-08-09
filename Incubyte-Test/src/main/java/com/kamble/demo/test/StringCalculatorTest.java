@@ -29,7 +29,6 @@ public class StringCalculatorTest {
 
 	@Test
 	public void Test_when_String_has_2_numbers() {
-
 		Assert.assertEquals(5, sc.Add("2,3"));
 	}
 }
